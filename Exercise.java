@@ -5,10 +5,10 @@ public class Exercise {
     public Exercise(String name, int reps, double gewicht) {
         if(gewicht < 0 || reps < 0)  {
             throw new IllegalArgumentException("Ungültig");
+        }
         this.name = name;
         this.reps = reps;
         this.gewicht = gewicht;
-    }
     }
     public String getName() {
         return name;
@@ -19,18 +19,19 @@ public class Exercise {
     public double getGewicht() {
         return gewicht;
     }
-    public setName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
-    public setReps(int reps) {
+    public void setReps(int reps) {
         if(reps < 0) {
             throw new IllegalArgumentException("Ungültig");
         }
         this.reps = reps;
     }
-    public setGewicht(double gewicht) {
+    public void setGewicht(double gewicht) {
         if(gewicht < 0) {
             throw new IllegalArgumentException("Ungültig");
         }
+        this.gewicht = gewicht;
     }
 }
