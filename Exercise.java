@@ -10,4 +10,5 @@ public class Exercise {
         this.gewicht = gewicht;
     }
     }
+    hi
 }
