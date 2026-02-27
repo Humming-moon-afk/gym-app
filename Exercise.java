@@ -34,4 +34,8 @@ public class Exercise {
         }
         this.gewicht = gewicht;
     }
+    @Override
+    public String toString() {
+        return name + " " + reps + " " + gewicht;
+    }
 }
