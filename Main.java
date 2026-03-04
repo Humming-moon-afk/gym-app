@@ -7,5 +7,9 @@ public class Main {
         } catch(IllegalArgumentException e) {
             System.err.println("Fehler!" + " Grund: " + e.getMessage());
         }
+        Session Tag2 = new Session("Push-Tag");
+        Tag2.addExercise(Tag1);
+        Tag2.getGesamtvolumen();
+        System.out.println(Tag2);
     }
 }

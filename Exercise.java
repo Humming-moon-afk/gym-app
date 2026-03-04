@@ -1,7 +1,10 @@
+import java.time.LocalDate;
+
 public class Exercise {
     private String name;
     private int reps;
     private double gewicht;
+    private LocalDate date;
     public Exercise(String name, int reps, double gewicht) {
         if(gewicht < 0 || reps < 0)  {
             throw new IllegalArgumentException("Ungültig");
@@ -9,6 +12,7 @@ public class Exercise {
         this.name = name;
         this.reps = reps;
         this.gewicht = gewicht;
+        this.date = LocalDate.now();
     }
     public String getName() {
         return name;
@@ -36,6 +40,6 @@ public class Exercise {
     }
     @Override
     public String toString() {
-        return name + " " + reps + " " + gewicht;
+        return name + " " + reps + " " + gewicht + " " + date;
     }
 }
